@@ -5,9 +5,6 @@ import NavBar from '../../components/NavBar/NavBar'
 import Signup from '../Signup/Signup'
 import Login from '../Login/Login'
 import Landing from '../Landing/Landing'
-import StateLocation from '../../components/StateLocaltion/StateLocation'
-import * as authService from '../../services/authService'
-import ProfileList from '../ProfileList/ProfileList'
 import ProfileList from '../ProfileList/ProfileList'
 import StateLocation from '../../components/StateLocaltion/StateLocation'
 import * as authService from '../../services/authService'
@@ -59,7 +56,5 @@ class App extends Component {
 
 export default App
 
-
-export default App
 
 
