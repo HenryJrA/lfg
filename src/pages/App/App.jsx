@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import NavBar from '../../components/NavBar/NavBar'
@@ -58,7 +57,6 @@ class App extends Component {
 		}
 	}
 
-=======
 import React, { useState, useEffect } from 'react'
 import {
     GoogleMap,
@@ -177,7 +175,6 @@ const Map = (props) => {
             </GoogleMap>
         </>
     )
-}
->>>>>>> 28e6acac3994e6342a488d81c10b027f0d102af6
+};
 
-export default Map;
+export default Map
