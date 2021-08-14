@@ -5,7 +5,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import Signup from '../Signup/Signup'
 import Login from '../Login/Login'
 import Landing from '../Landing/Landing'
-import Users from '../Users/Users'
+import ProfileList from '../ProfileList/ProfileList'
 import StateLocation from '../../components/StateLocaltion/StateLocation'
 import * as authService from '../../services/authService'
 
@@ -46,7 +46,7 @@ class App extends Component {
         <Route 
           exact path="/users"
           render={()=> 
-            user ? <Users /> : <Redirect to='/login'/>
+            user ? <ProfileList /> : <Redirect to='/login'/>
         }/>
 
       </>
