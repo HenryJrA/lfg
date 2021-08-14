@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Route, Redirect } from 'react-router-dom'
+
 import NavBar from '../../components/NavBar/NavBar'
 import Signup from '../Signup/Signup'
 import Login from '../Login/Login'
 import Landing from '../Landing/Landing'
-import * as authService from '../../services/authService'
 import Users from '../Users/Users'
-
 import StateLocation from '../../components/StateLocaltion/StateLocation'
+import * as authService from '../../services/authService'
+
 
 class App extends Component {
 	state = {
