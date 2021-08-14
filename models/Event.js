@@ -10,6 +10,9 @@ const replySchema = new mongoose.Schema(
     content: String,
     author: {type: Schema.Types.ObjectId, ref: "Profile"},
     comment: { type: Schema.Types.ObjectId, ref: "Comment"}
+  },
+  {
+    timestamps: true,
   }
 )
 
