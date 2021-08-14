@@ -7,6 +7,8 @@ import Landing from '../Landing/Landing'
 import * as authService from '../../services/authService'
 import Users from '../Users/Users'
 
+import StateLocation from '../../components/StateLocaltion/StateLocation'
+
 class App extends Component {
 	state = {
 		user: authService.getUser()
@@ -28,7 +30,11 @@ class App extends Component {
 			<>
 				<NavBar user={user} handleLogout={this.handleLogout} history={this.props.history}/>
 				<Route exact path='/'>
-          <Landing user={user} />
+          <Landing user={user} 
+					render={()=> <StateLocation
+					
+					/>}
+					/>
         </Route>
 				<Route exact path='/signup'>
           <Signup history={this.props.history} handleSignupOrLogin={this.handleSignupOrLogin}/>

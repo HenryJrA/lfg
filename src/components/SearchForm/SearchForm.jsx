@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form } from 'semantic-ui-react';
+
 
 class Search extends Component {
   state = { 
@@ -39,6 +39,12 @@ handleSubmit = e => {
           onChange={this.handleChange}
           placeholder='Search events'
           />
+          <button
+          type="submit"
+    			disabled={this.state.invalidForm}
+        >
+				  Search
+        </button>   
         </form>
       </>
      );
