@@ -1,8 +1,8 @@
-import { createEvent } from '@testing-library/react'
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchForm from '../SearchForm/SearchForm'
-import CreateEventForm from '../CreateEventForm/CreateEventForm'
+
 const NavBar = ({ user, handleLogout, history }) => {
 	return (
 		<>
@@ -10,7 +10,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 				<nav>
 					<div>
 						<ul>
-							<li>Welcome, {user.name}</li>
+							<Link to="/">Welcome, {user.name}</Link>
 							<li>
                 <Link to="/users">Users</Link>
               </li>
