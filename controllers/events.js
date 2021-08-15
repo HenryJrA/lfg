@@ -4,8 +4,17 @@ export {
   index,
   deleteEvent,
   show,
-  update
+  update,
+  editEvent as edit
   // addEvent
+}
+
+function editEvent(req, res) {
+  Event.findById(req.params.id)
+  .populate('host')
+  .then(event => {
+    res.json(event)
+  })
 }
 
 function update(req, res) {
