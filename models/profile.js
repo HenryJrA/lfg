@@ -8,6 +8,8 @@ const profileSchema = new mongoose.Schema(
   {
     email: String,
     name: String,
+    gender: String,
+    pronouns: String
   },
   {
     timestamps: true,
