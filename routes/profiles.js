@@ -15,3 +15,5 @@ export {
 router.use(decodeUserFromToken)
 router.get("/", checkAuth, profilesCtrl.index)
 router.get("/userProfile", checkAuth, profilesCtrl.userProfile)
+router.put('/:id', checkAuth, profilesCtrl.update)
+router.get('/:id/edit', checkAuth, profilesCtrl.edit)

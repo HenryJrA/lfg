@@ -2,7 +2,24 @@ import { Profile } from "../models/profile.js"
 
 export {
   userProfile,
-  index
+  index,
+  editProfile as edit,
+  update
+}
+
+function update(req, res) {
+  Profile.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(profile => {
+    res.json(profile)
+  })
+}
+
+function editProfile(req, res) {
+  Profile.findById(req.params.id)
+  .populate('host')
+  .then(profile => {
+    res.json(profile)
+  })
 }
 
 function index(req, res) {
