@@ -13,7 +13,7 @@ import ProfileList from '../ProfileList/ProfileList'
 
 class App extends Component {
   state = {
-    user: authService.getUser()
+    user: authService.getUser(),
   }
 
   handleLogout = () => {
@@ -32,9 +32,11 @@ class App extends Component {
       <>
         <NavBar user={user} handleLogout={this.handleLogout} history={this.props.history}/>
         <Route exact path='/'>
-          <Landing user={user} 
-          render={()=> <StateLocation
-          
+          <Landing 
+          history={this.props.history}
+          user={user} 
+          render={({history})=> <StateLocation
+          history={this.props.history}
           />}
           />
         </Route>
