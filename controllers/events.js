@@ -6,7 +6,7 @@ export {
   show,
   update,
   editEvent as edit
-  // addEvent
+  // createEvent
 }
 
 function editEvent(req, res) {
@@ -56,7 +56,7 @@ function show(req, res) {
   })
 }
 
-// function addEvent(req, res) {
+// function createEvent(req, res) {
 //   req.body.host = req.user.profile
 //   Event.findById(req.user.profile)
 

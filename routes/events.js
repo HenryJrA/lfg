@@ -21,5 +21,5 @@ router.get('/:id/edit', checkAuth, eventsCtrl.edit)
 
 // router.post('/:id/replies', isLoggedIn, postsCtrl.addReply)
 // router.delete('/:postId/replies/:replyId', isLoggedIn, postsCtrl.deleteReply)
-// router.post('/addEvent', checkAuth, eventsCtrl.addEvent)
+// router.post('/addEvent', checkAuth, eventsCtrl.createEvent)
 // 
