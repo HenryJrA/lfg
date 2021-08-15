@@ -3,8 +3,16 @@ import { Event } from "../models/event.js"
 export {
   index,
   deleteEvent,
-  show
+  show,
+  update
   // addEvent
+}
+
+function update(req, res) {
+  Event.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(event => {
+    res.json(event)
+  })
 }
 
 function index(req, res) {
