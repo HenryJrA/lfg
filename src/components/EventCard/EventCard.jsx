@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-class EventCard extends Component {
-  state = { 
-
-   }
-  render() { 
-    return ( 
-      <>
-      </>
-     );
-  }
+const EventCard = (props) => {
+  return ( 
+    <>
+    <Link>
+    
+    <h2>theese are the events</h2>
+    </Link>
+    </>
+  
+  );
 }
  
 export default EventCard;
