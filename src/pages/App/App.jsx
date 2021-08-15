@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Redirect } from 'react-router-dom'
-
+import EventCard from '../../components/EventCard/EventCard'
 import NavBar from '../../components/NavBar/NavBar'
 import Signup from '../Signup/Signup'
 import Login from '../Login/Login'
@@ -48,6 +48,11 @@ class App extends Component {
           exact path="/users"
           render={()=> 
             user ? <ProfileList /> : <Redirect to='/login'/>
+        }/>
+        <Route
+        exact path='/events'
+        render={()=> 
+          <EventCard />
         }/>
 
       </>
