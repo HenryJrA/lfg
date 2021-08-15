@@ -31,7 +31,7 @@ class MapCard extends Component {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
-          zoom={10}
+          zoom={12}
         >
           { /* Child components, such as markers, info windows, etc. */ }
           <Marker 

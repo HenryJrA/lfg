@@ -1,12 +1,14 @@
+
 import { Event } from "../models/event.js"
+import axios from 'axios'
 
 export {
   index,
   deleteEvent,
   show,
   update,
-  editEvent as edit
-  // addEvent
+  editEvent as edit,
+  createEvent
 }
 
 function editEvent(req, res) {
@@ -56,11 +58,17 @@ function show(req, res) {
   })
 }
 
-// function addEvent(req, res) {
-//   req.body.host = req.user.profile
-//   Event.findById(req.user.profile)
-
-// }
+function createEvent(req, res) {
+  axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${req.body.address}&key=${process.env.GEOCODING_API}`)
+  .then(response => {
+    
+    req.body.host = req.user.profile
+    Event.create(req.body)
+    .then(event => {
+      res.json(event, )
+    })
+  })
+}
 
 function deleteEvent(req, res) {
   Event.findByIdAndDelete(req.params.id)
