@@ -57,7 +57,7 @@ function show(req, res) {
 }
 
 function createEvent(req, res) {
-//   req.body.host = req.user.profile11111111111
+//   req.body.host = req.user.profile
 //   Event.findById(req.user.profile)
 }
 
