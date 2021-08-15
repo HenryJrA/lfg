@@ -14,9 +14,8 @@ const center = {
 };
 
 const position = {
-  lat: 42.9621248,
-  lng: -72.6532096
-
+  lat: 43.0099506,
+  lng: -72.67172359999999
 }
 
 const onLoad = marker => {
@@ -32,7 +31,7 @@ class MapCard extends Component {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
-          zoom={13}
+          zoom={10}
         >
           { /* Child components, such as markers, info windows, etc. */ }
           <Marker 
