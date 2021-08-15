@@ -1,0 +1,95 @@
+{
+  "results": [
+      {
+          "address_components": [
+              {
+                  "long_name": "42",
+                  "short_name": "42",
+                  "types": [
+                      "street_number"
+                  ]
+              },
+              {
+                  "long_name": "Upper Eager Road",
+                  "short_name": "Upper Eager Rd",
+                  "types": [
+                      "route"
+                  ]
+              },
+              {
+                  "long_name": "Newfane",
+                  "short_name": "Newfane",
+                  "types": [
+                      "locality",
+                      "political"
+                  ]
+              },
+              {
+                  "long_name": "Windham County",
+                  "short_name": "Windham County",
+                  "types": [
+                      "administrative_area_level_2",
+                      "political"
+                  ]
+              },
+              {
+                  "long_name": "Vermont",
+                  "short_name": "VT",
+                  "types": [
+                      "administrative_area_level_1",
+                      "political"
+                  ]
+              },
+              {
+                  "long_name": "United States",
+                  "short_name": "US",
+                  "types": [
+                      "country",
+                      "political"
+                  ]
+              },
+              {
+                  "long_name": "05345",
+                  "short_name": "05345",
+                  "types": [
+                      "postal_code"
+                  ]
+              },
+              {
+                  "long_name": "2202",
+                  "short_name": "2202",
+                  "types": [
+                      "postal_code_suffix"
+                  ]
+              }
+          ],
+          "formatted_address": "42 Upper Eager Rd, Newfane, VT 05345, USA",
+          "geometry": {
+              "location": {
+                  "lat": 43.0099506,
+                  "lng": -72.67172359999999
+              },
+              "location_type": "ROOFTOP",
+              "viewport": {
+                  "northeast": {
+                      "lat": 43.01129958029149,
+                      "lng": -72.67037461970848
+                  },
+                  "southwest": {
+                      "lat": 43.0086016197085,
+                      "lng": -72.67307258029149
+                  }
+              }
+          },
+          "place_id": "ChIJl1PrmZkB4YkRug-cSKX51j4",
+          "plus_code": {
+              "compound_code": "285H+X8 Newfane, VT, USA",
+              "global_code": "87M9285H+X8"
+          },
+          "types": [
+              "street_address"
+          ]
+      }
+  ],
+  "status": "OK"
+}
