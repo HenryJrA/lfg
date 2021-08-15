@@ -6,7 +6,7 @@ const EventCard = (props) => {
     <>
     <Link>
     
-    <h2>theese are the events</h2>
+    <h2>these are the events</h2>
     </Link>
     </>
   
