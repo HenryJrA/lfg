@@ -5,8 +5,8 @@ export {
   deleteEvent,
   show,
   update,
-  editEvent as edit
-  // createEvent
+  editEvent as edit,
+  createEvent
 }
 
 function editEvent(req, res) {
@@ -56,11 +56,10 @@ function show(req, res) {
   })
 }
 
-// function createEvent(req, res) {
+function createEvent(req, res) {
 //   req.body.host = req.user.profile
 //   Event.findById(req.user.profile)
-
-// }
+}
 
 function deleteEvent(req, res) {
   Event.findByIdAndDelete(req.params.id)
