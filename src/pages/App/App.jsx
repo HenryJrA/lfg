@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import EventCard from '../../components/EventCard/EventCard'
+import EventList from '../EventList/EventList'
 import NavBar from '../../components/NavBar/NavBar'
 import Signup from '../Signup/Signup'
 import Login from '../Login/Login'
@@ -35,9 +36,6 @@ class App extends Component {
           <Landing 
           history={this.props.history}
           user={user} 
-          render={({history})=> <StateLocation
-          history={this.props.history}
-          />}
           />
         </Route>
         <Route exact path='/signup'>
@@ -49,12 +47,12 @@ class App extends Component {
         <Route 
           exact path="/users"
           render={()=> 
-            user ? <ProfileList /> : <Redirect to='/login'/>
+            authService.getUser() ? <ProfileList /> : <Redirect to='/login'/>
         }/>
         <Route
         exact path='/events'
         render={()=> 
-          <EventCard />
+          <EventList user={user} />
         }/>
 
       </>

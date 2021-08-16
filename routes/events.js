@@ -18,8 +18,8 @@ router.delete('/:id', checkAuth, eventsCtrl.deleteEvent)
 router.get('/:id', checkAuth, eventsCtrl.show)
 router.put('/:id', checkAuth, eventsCtrl.update)
 router.get('/:id/edit', checkAuth, eventsCtrl.edit)
+router.post('/createEvent', checkAuth, eventsCtrl.createEvent)
 
 // router.post('/:id/replies', isLoggedIn, postsCtrl.addReply)
 // router.delete('/:postId/replies/:replyId', isLoggedIn, postsCtrl.deleteReply)
-router.post('/createEvent', checkAuth, eventsCtrl.createEvent)
 // 

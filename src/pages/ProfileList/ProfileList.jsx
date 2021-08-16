@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getAllProfiles } from "../../services/profileService"
-
+import ProfileCard from '../../components/ProfileCard/ProfileCard'
 
 class ProfileList extends Component {
   state = {
@@ -14,7 +14,15 @@ class ProfileList extends Component {
 
   render() { 
     return (
-      <h1>Sanity Check</h1>
+      <>
+      <h1>Profile List</h1>
+      {this.state.profiles.map(profile => 
+        <ProfileCard
+          key={profile._id}
+          profile={profile}
+        />
+      )}
+    </>
     );
   }
 }
