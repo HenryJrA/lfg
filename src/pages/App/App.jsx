@@ -52,7 +52,9 @@ class App extends Component {
         <Route
         exact path='/events'
         render={()=> 
-          <EventList user={user} />
+          <EventList 
+          history={this.props.history}
+          user={user} />
         }/>
 
       </>
