@@ -1,5 +1,6 @@
 import React from 'react';
-import EventList from '../EventList/EventList';
+import React, { Component } from 'react';
+import * as eventServices from '../../services/e'
 import EventCard from '../../components/EventCard/EventCard';
 class EventDetails extends Component {
   state = { 
