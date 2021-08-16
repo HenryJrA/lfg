@@ -13,10 +13,11 @@ class StateLocation extends Component {
   render = () => { 
     return ( 
       <>
-      <EventCard 
+      {/* <EventCard
+      event={this.props.event} 
       history={this.props.history}
-      user={this.props.user}
-      />
+      user={this.props.user} */}
+      {/* /> */}
       </>
      );
   }
