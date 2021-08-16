@@ -1,4 +1,5 @@
 import { Event } from "../models/event.js"
+import axios from 'axios'
 
 export {
   index,
@@ -57,8 +58,15 @@ function show(req, res) {
 }
 
 function createEvent(req, res) {
-//   req.body.host = req.user.profile11
-//   Event.findById(req.user.profile)
+  axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${req.body.address}&key=${process.env.GEOCODING_API}`)
+  .then(response => {
+    
+    req.body.host = req.user.profile
+    Event.create(req.body)
+    .then(event => {
+      res.json(event, )
+    })
+  })
 }
 
 function deleteEvent(req, res) {

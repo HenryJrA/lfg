@@ -47,7 +47,7 @@ class App extends Component {
         <Route 
           exact path="/users"
           render={()=> 
-            user ? <ProfileList /> : <Redirect to='/login'/>
+            authService.getUser() ? <ProfileList /> : <Redirect to='/login'/>
         }/>
         <Route
         exact path='/events'
