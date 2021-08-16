@@ -36,6 +36,10 @@ class CreateEventForm extends Component {
     e.preventDefault()
     this.props.handleDeleteEvent(this.state.formData)
   }
+  handleEditEvent = e =>{
+    e.preventDefault()
+    this.props.handleEditEvent(this.state.formData)
+  }
   
   render() { 
     return (

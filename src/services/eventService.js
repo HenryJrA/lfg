@@ -22,12 +22,24 @@ export function getAllEvents() {
   ).then(res => res.json())
 }
 
-export function deleteEvent(){
+export function deleteEvent(id){
   return fetch(
-    `${BASE_URL}`,
+    `${BASE_URL}${id}`,
     {
       method: 'DELETE',
       headers: {'Authorization': 'Bearer ' + tokenService.getToken()},
+    },
+    { mode: "cors" })
+  .then((res) => res.json())
+  
+}
+
+export function editEvent(id){
+return fetch(
+  `${BASE_URL}${id}/edit`, 
+{
+  method: "PATCH", 
+  headers: {'Authorization': 'Bearer ' + tokenService.getToken()},
     },
     { mode: "cors" })
   .then((res) => res.json())

@@ -16,6 +16,7 @@ class EventDetails extends Component {
       event={event}
       user={this.props.user}
       handleDeleteEvent={props.handleDeleteEvent}
+      handleEditEvent = {props.handleEditEvent}
     />
   )}
 </div>

@@ -27,9 +27,7 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({ user: authService.getUser() })
   }
-  handleDeleteEvent = (id) => {
-    this.setState({ user: deleteEvent})
-  }
+ 
 
   render() {
     const { user } = this.state
@@ -59,7 +57,8 @@ class App extends Component {
           <EventList 
           history={this.props.history}
           user={user} 
-          handleDeleteEvent ={this.handleDeleteEvent}/>
+          handleDeleteEvent ={this.handleDeleteEvent}
+          handleEditEvent = {this.handleEditEvent}/>
         }/>
 
       </>
