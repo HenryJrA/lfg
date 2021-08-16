@@ -32,9 +32,7 @@ const eventSchema = new mongoose.Schema(
     host: {type: Schema.Types.ObjectId, ref: "Profile"},
     address: String,
     comment: [commentSchema],
-    center: String,
     position: String,
-    zoom: Number,
     attendees: [{type: Schema.Types.ObjectId, ref: "Profile"}],
     date: {type: Date},
     time: {type: Date} 

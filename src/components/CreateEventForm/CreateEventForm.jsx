@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
+import * as eventService from '../../services/eventService'
+import * as apiService from '../../services/apiService'
 
 class CreateEventForm extends Component {
   state = { 
     invalidForm: true,
-    type:"",
-    name: "",
-    address: "",
-    zipCode: "",
+    
+    formData: {
+      host: this.props.user,
+      type:"",
+      name: "",
+      address: "",
+      zipCode: "",
+    },
    }
+
    formRef = React.createRef();
 
 	handleChange = e => {
-		const formData = {...this.state.formData, [e.target.name]: e.target.value};
+    console.log(e.target)
+    const formData = {...this.state.formData, [e.target.name]: e.target.value};
 		this.setState({
 		formData,
 		invalidForm: !this.formRef.current.checkValidity()
@@ -20,6 +28,8 @@ class CreateEventForm extends Component {
 
   handleSubmit = e => {
 		e.preventDefault();
+  eventService.createEvent(this.state.formData)
+  .then(res=> this.props.history.push('/'))
     
   };
   
@@ -28,37 +38,48 @@ class CreateEventForm extends Component {
       <>
         <form 
         ref={this.formRef} 
-        onsubmit={this.handleSubmit}
+        onSubmit={this.handleSubmit}
         >
           <input
-          type ="location"
-          value={this.state.formData}
-          onchange={this.handleChange}
+          type ="text"
+          name='name'
+          onChange={this.handleChange}
+          placeholder='Event Name'
           required
+          value={this.state.formData.name}
           />
           <input
           name="type"
+          value={this.state.formData.type}
           id="eventChoice"  
-          value="event"
-          onchange={this.handleChange}
+          placeholder='Type of event'
+          onChange={this.handleChange}
           required
           />
           <input 
           type="text" 
           name="address"
-          value="address"
-          onchange={this.handleChange}
+          placeholder="address/city/state"
+          onChange={this.handleChange}
+          value={this.state.formData.address}
           required
           />
           <input
-          type="number"
+          value={this.state.formData.zipCode}
+          type="text"
           name="zipCode"
-          value="zipCode"
-          onchange={this.handleChange}
+          placeholder="Zip Code (optional)"
+          onChange={this.handleChange}
+          />
+          <input
+          value={this.props.user}
+          name="host"
+          hidden="true"
           />
            <button
           type="submit"
-    			disabled={this.state.invalidForm}
+    			disabled={this.invalidForm}
+          onClick={this.handleSubmit}
         >Submit event </button>
         </form>
       </>
