@@ -9,6 +9,7 @@ import Landing from '../Landing/Landing'
 import StateLocation from '../../components/StateLocaltion/StateLocation'
 import * as authService from '../../services/authService'
 import ProfileList from '../ProfileList/ProfileList'
+import { deleteEvent } from '../../services/eventService'
 
 
 
@@ -25,6 +26,9 @@ class App extends Component {
 
   handleSignupOrLogin = () => {
     this.setState({ user: authService.getUser() })
+  }
+  handleDeleteEvent = (id) => {
+    this.setState({ user: deleteEvent})
   }
 
   render() {
@@ -54,7 +58,8 @@ class App extends Component {
         render={()=> 
           <EventList 
           history={this.props.history}
-          user={user} />
+          user={user} 
+          handleDeleteEvent ={this.handleDeleteEvent}/>
         }/>
 
       </>

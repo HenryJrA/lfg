@@ -12,6 +12,7 @@ class EventList extends Component {
     const events = await eventService.getAllEvents()
     this.setState({ events })
   }
+  
 
   handleAddEvent = (id) => {
     console.log(id)

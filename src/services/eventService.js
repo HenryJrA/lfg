@@ -21,3 +21,15 @@ export function getAllEvents() {
     }, {mode: "cors"}
   ).then(res => res.json())
 }
+
+export function deleteEvent(){
+  return fetch(
+    `${BASE_URL}`,
+    {
+      method: 'DELETE',
+      headers: {'Authorization': 'Bearer ' + tokenService.getToken()},
+    },
+    { mode: "cors" })
+  .then((res) => res.json())
+  
+}

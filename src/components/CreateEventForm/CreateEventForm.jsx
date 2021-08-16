@@ -32,10 +32,15 @@ class CreateEventForm extends Component {
   .then(res=> this.props.history.push('/'))
     
   };
+  handleDeleteEvent = e => {
+    e.preventDefault()
+    this.props.handleDeleteEvent(this.state.formData)
+  }
   
   render() { 
     return (
       <>
+      
         <form 
         ref={this.formRef} 
         onSubmit={this.handleSubmit}
@@ -50,10 +55,10 @@ class CreateEventForm extends Component {
           />
           <input
           name="type"
-          value={this.state.formData.type}
           id="eventChoice"  
           placeholder='Type of event'
           onChange={this.handleChange}
+          value={this.state.formData.type}
           required
           />
           <input 
@@ -65,11 +70,11 @@ class CreateEventForm extends Component {
           required
           />
           <input
-          value={this.state.formData.zipCode}
           type="text"
           name="zipCode"
           placeholder="Zip Code (optional)"
           onChange={this.handleChange}
+          value={this.state.formData.zipCode}
           />
           <input
           value={this.props.user}
