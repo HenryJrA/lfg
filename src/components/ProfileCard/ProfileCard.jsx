@@ -12,6 +12,7 @@ const ProfileCard = ({profile}) => {
       >
         <h2>{profile.name}</h2>
       </Link>
+        
     </>
   )
 }
