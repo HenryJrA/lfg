@@ -1,21 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MapCard from '../MapCard/MapCard';
-import CreateEventForm from '../CreateEventForm/CreateEventForm'
 
-const EventCard = ({user, history}) => {
+
+const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent}) => {
+
   return ( 
     <>
-    <Link>
-    
-    <h2>these are the events</h2>
-    </Link>
-   
-    <h3>Add an event<CreateEventForm 
-    history={history}
-    user={user}
-    /></h3>
-    <MapCard />
+    <h1>{event.address}</h1>
+    <h2>{event.host.name}</h2>
+    {event.host._id !== user.profile && event.attendees.every(person => person._id !== user.profile) &&
+    <button onClick={() => handleAddEvent(event._id)}>Join Event</button>
+    }
+    {event.host._id !== user.profile && event.attendees.some(person => person._id === user.profile) &&
+    <button onClick={() => handleLeaveEvent(event._id)}>Leave Event</button>
+    }
+    {/* <MapCard /> */}
     </>
   
   );
