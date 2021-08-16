@@ -7,8 +7,8 @@ const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent}) => 
 
   return ( 
     <>
-    <h1>{event.address}</h1>
-    <h2>{event.host.name}</h2>
+    <h1>{event?.address}</h1>
+    <h2>{event.host?.name}</h2>
     {event.host._id !== user.profile && event.attendees.every(person => person._id !== user.profile) &&
     <button onClick={() => handleAddEvent(event._id)}>Join Event</button>
     }
