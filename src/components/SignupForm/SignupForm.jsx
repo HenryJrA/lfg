@@ -7,6 +7,8 @@ class SignupForm extends Component {
   state = {
     name: '',
     email: '',
+    gender: '',
+    pronouns: '',
     password: '',
     passwordConf: '',
   }
@@ -36,7 +38,7 @@ class SignupForm extends Component {
   }
 
   render() {
-    const { name, email, password, passwordConf } = this.state
+    const { name, email, gender, pronouns, password, passwordConf } = this.state
     return (
       <form
         autoComplete="off"
@@ -68,6 +70,28 @@ class SignupForm extends Component {
           />
         </div>
         <div className={styles.inputContainer}>
+          <label htmlFor="gender" className={styles.label}>Gender</label>
+          <input
+            type="gender"
+            autoComplete="off"
+            id="gender"
+            value={gender}
+            name="gender"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <label htmlFor="pronouns" className={styles.label}>Pronouns</label>
+          <input
+            type="pronouns"
+            autoComplete="off"
+            id="pronouns"
+            value={pronouns}
+            name="pronouns"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className={styles.inputContainer}>
           <label htmlFor="password" className={styles.label}>Password</label>
           <input
             type="password"
@@ -79,7 +103,7 @@ class SignupForm extends Component {
           />
         </div>
         <div className={styles.inputContainer}>
-          <label htmlFor="confirm" className={styles.label}>Confirm Password</label>
+          <label htmlFor="confirm" className={styles.label}>Confirm<br/>Password</label>
           <input
             type="password"
             autoComplete="off"
