@@ -9,6 +9,8 @@ import Landing from '../Landing/Landing'
 import StateLocation from '../../components/StateLocaltion/StateLocation'
 import * as authService from '../../services/authService'
 import ProfileList from '../ProfileList/ProfileList'
+import ProfileDetails from '../Profile/ProfileDetails'
+
 
 
 
@@ -55,6 +57,11 @@ class App extends Component {
           <EventList 
           history={this.props.history}
           user={user} />
+        }/>
+        <Route
+        exact path='/profile'
+        render={({location}) =>
+          <ProfileDetails user={user} location={location} />
         }/>
 
       </>
