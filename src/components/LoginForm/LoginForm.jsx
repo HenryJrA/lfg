@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './LoginForm.module.css'
+import { Button, Form } from 'semantic-ui-react'
 import * as authService from '../../services/authService'
 
 class LoginForm extends Component {
@@ -28,42 +29,63 @@ class LoginForm extends Component {
   render() {
     const { email, pw } = this.state
     return (
-      <form
+      <Form
+
+      
         autoComplete="off"
         onSubmit={this.handleSubmit}
         className={styles.container}
       >
-        <div className={styles.inputContainer}>
-          <label htmlFor="email" className={styles.label}>Email</label>
-          <input
-            type="text"
-            autoComplete="off"
-            id="email"
-            value={email}
-            name="email"
-            onChange={this.handleChange}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <label htmlFor="password" className={styles.label}>Password</label>
-          <input
-            type="password"
-            autoComplete="off"
-            id="password"
-            value={pw}
-            name="pw"
-            onChange={this.handleChange}
-          />
-        </div>
-        <div>
-          <button className={styles.button}>Log In</button>
-          <Link to="/">
-            <button>Cancel</button>
-          </Link>
-        </div>
-      </form>
+     
+          <Form.Field
+          className={styles.inputContainer}
+          >
+          <label
+          htmlFor="email">email<br/></label>
+          <input 
+          type="text"
+          autoComplete="off"
+          id="email"
+          value={email}
+          name="email"
+          onChange={this.handleChange}
+          placeholder="enter email adress" />
+          </Form.Field>
+          <Form.Field
+          
+          >
+          <label
+          htmlFor="password" 
+      
+          >Password<br/></label>
+         <input 
+          type="password"
+          autoComplete="off"
+          id="password"
+          value={pw}
+          name="pw"
+          onChange={this.handleChange}
+         />
+          </Form.Field>
+<Form.Field>
+  <Button 
+  className={styles.button}
+  type='submit'
+  >Login</Button>
+  <Button 
+className={styles.button}
+type='submit'
+  >Cancel</Button>
+  
+</Form.Field>
+<Link to="/"/>
+       
+       
+        </Form>
     )
   }
 }
 
 export default LoginForm
+
+

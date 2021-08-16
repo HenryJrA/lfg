@@ -9,7 +9,9 @@ import Landing from '../Landing/Landing'
 import StateLocation from '../../components/StateLocaltion/StateLocation'
 import * as authService from '../../services/authService'
 import ProfileList from '../ProfileList/ProfileList'
-import { deleteEvent } from '../../services/eventService'
+import ProfileDetails from '../ProfileDetails/ProfileDetails'
+import ProfileUpdate from '../ProfileUpdate/ProfileUpdate'
+
 
 
 
@@ -59,6 +61,17 @@ class App extends Component {
           user={user} 
           handleDeleteEvent ={this.handleDeleteEvent}
           handleEditEvent = {this.handleEditEvent}/>
+        }/>
+        <Route
+        exact path='/profile'
+        render={({location}) =>
+          <ProfileDetails user={user} location={location} />
+        }/>
+
+        <Route
+        exact path='/profile/:id/update'
+        render={({location}) =>
+            <ProfileUpdate location={location} />
         }/>
 
       </>
