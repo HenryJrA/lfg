@@ -12,6 +12,7 @@ class EventList extends Component {
     const events = await eventService.getAllEvents()
     this.setState({ events })
   }
+  
 
   handleAddEvent = (id) => {
     console.log(id)
@@ -19,6 +20,15 @@ class EventList extends Component {
 
   handleLeaveEvent = (id) => {
     console.log(id)
+  }
+  handleDeleteEvent = async id => {
+    const deleteEvent = await eventService.deleteEvent(id)
+    this.setState({ user: deleteEvent})
+    
+  }
+  handleEditEvent = async id => {
+    const editEvent = await eventService.editEvent(id)
+    this.setState({ user: editEvent})
   }
 
   render() { 
@@ -31,6 +41,8 @@ class EventList extends Component {
       <EventCard 
       handleAddEvent={this.handleAddEvent}
       handleLeaveEvent={this.handleLeaveEvent}
+      handleDeleteEvent={this.handleDeleteEvent}
+      handleEditEvent={this.handleEditEvent}
       event={event}
       key={event._id}
       user={this.props.user}

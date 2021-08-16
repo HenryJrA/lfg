@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import MapCard from '../MapCard/MapCard';
 
 
-const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent}) => {
+const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent, handleDeleteEvent, handleEditEvent}) => {
 
-  return ( 
+  return (
+
     <>
     <h1>{event?.address}</h1>
     <h2>{event.host?.name}</h2>
@@ -15,6 +16,9 @@ const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent}) => 
     {event.host._id !== user.profile && event.attendees.some(person => person._id === user.profile) &&
     <button onClick={() => handleLeaveEvent(event._id)}>Leave Event</button>
     }
+  <button onClick={() => handleDeleteEvent(event._id)}>Delete</button>
+    
+  {/* <button onClick={(render)=>}>Edit Event</button>   */}
     {/* <MapCard /> */}
     </>
   
