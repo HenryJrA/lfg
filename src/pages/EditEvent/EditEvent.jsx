@@ -13,7 +13,7 @@ class EditEvent extends Component {
      console.log("test")
     e.preventDefault();
     const event = eventService.editEvent(this.props.location.state.event._id, this.state.formData)
-    this.props.history.push("/")
+    this.props.history.push("/events")
   };
 
   handleChange = e => {
@@ -79,7 +79,7 @@ class EditEvent extends Component {
           <button>
           <Link 
             className='btn btn-danger m-left'
-            to='/'
+            to='/events'
             
             >
             Cancel
