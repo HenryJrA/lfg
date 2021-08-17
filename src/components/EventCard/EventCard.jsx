@@ -17,8 +17,9 @@ const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent, hand
     <button onClick={() => handleLeaveEvent(event._id)}>Leave Event</button>
     }
   <button onClick={() => handleDeleteEvent(event._id)}>Delete</button>
-    
-  {/* <button onClick={(render)=>}>Edit Event</button>   */}
+   <Link to={{pathname:`/events/${event._id}/edit`, state:{event}}}>
+  <button>Edit Event</button>  
+   </Link> 
     {/* <MapCard /> */}
     </>
   
