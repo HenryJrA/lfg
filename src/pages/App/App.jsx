@@ -11,7 +11,8 @@ import * as authService from '../../services/authService'
 import ProfileList from '../ProfileList/ProfileList'
 import ProfileDetails from '../ProfileDetails/ProfileDetails'
 import ProfileUpdate from '../ProfileUpdate/ProfileUpdate'
-
+import EditEvent from '../EditEvent/EditEvent'
+import * as eventService from '../../services/eventService'
 
 
 
@@ -29,7 +30,6 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({ user: authService.getUser() })
   }
- 
 
   render() {
     const { user } = this.state
@@ -73,6 +73,14 @@ class App extends Component {
         render={({location}) =>
             <ProfileUpdate location={location} />
         }/>
+        <Route
+        exact path='/events/:id/edit'
+        render={({location}) =>
+        <EditEvent
+        handleEditEvent={this.handleEditEvent}
+        location={location}/>
+      }
+        />'
 
       </>
     )

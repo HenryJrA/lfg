@@ -11,7 +11,7 @@ class EditEvent extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.handleUpdateEvent(this.state.formData);
+    this.props.handleEditEvent(this.state.formData);
   };
 
   handleChange = e => {
@@ -74,12 +74,15 @@ class EditEvent extends Component {
           >
             Save New Event 
           </button>
+          <button>
           <Link 
             className='btn btn-danger m-left'
             to='/'
-          >
+            
+            >
             Cancel
           </Link>
+              </button>
         </form>
       </>
     );
