@@ -29,7 +29,7 @@ class CreateEventForm extends Component {
   handleSubmit = e => {
 		e.preventDefault();
   eventService.createEvent(this.state.formData)
-  .then(res=> this.props.history.push('/'))
+  .then(res=> this.props.history.push('/events'))
     
   };
   handleDeleteEvent = e => {
