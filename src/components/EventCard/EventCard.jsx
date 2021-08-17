@@ -16,10 +16,14 @@ const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent, hand
     {event.host._id !== user.profile && event.attendees.some(person => person._id === user.profile) &&
     <button onClick={() => handleLeaveEvent(event._id)}>Leave Event</button>
     }
+{event.host._id === user.profile && event.attendees.every(person => person._id !== user.profile) &&
   <button onClick={() => handleDeleteEvent(event._id)}>Delete</button>
-   <Link to={{pathname:`/events/${event._id}/edit`, state:{event}}}>
+  }
+   {event.host._id === user.profile && event.attendees.every(person => person._id !== user.profile)&&
+     <Link to={{pathname:`/events/${event._id}/edit`, state:{event}}}>
   <button>Edit Event</button>  
    </Link> 
+  }
     {/* <MapCard /> */}
     </>
   

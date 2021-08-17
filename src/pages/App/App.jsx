@@ -84,7 +84,7 @@ class App extends Component {
         history ={history}
         />
       }
-        />'
+        />
 
       </>
     )
