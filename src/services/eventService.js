@@ -34,14 +34,14 @@ export function deleteEvent(id){
   
 }
 
-export function editEvent(id){
-return fetch(
-  `${BASE_URL}${id}/edit`, 
-{
-  method: "PATCH", 
-  headers: {'Authorization': 'Bearer ' + tokenService.getToken()},
-    },
-    { mode: "cors" })
-  .then((res) => res.json())
-  
+export function editEvent(id, formData){
+  console.log("test2")
+  return fetch(`${BASE_URL}${id}/edit`, {
+    method: "PATCH",
+    headers: { Authorization: "Bearer " + tokenService.getToken(), "content-type": "application/json" },
+    body: JSON.stringify(formData),
+  },
+  { mode: "cors"}
+  )
+  .then(res => res.json())
 }

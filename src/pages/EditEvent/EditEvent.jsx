@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-
+import * as eventService from '../../services/eventService'
 class EditEvent extends Component {
   state = {
     invalidForm: false,
@@ -9,9 +9,11 @@ class EditEvent extends Component {
 
   formRef = React.createRef();
 
-  handleSubmit = e => {
+   handleSubmit = async e => {
+     console.log("test")
     e.preventDefault();
-    this.props.handleEditEvent(this.state.formData);
+    const event = eventService.editEvent(this.props.location.state.event._id, this.state.formData)
+    this.props.history.push("/")
   };
 
   handleChange = e => {

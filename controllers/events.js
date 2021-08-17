@@ -12,7 +12,7 @@ export {
 }
 
 function editEvent(req, res) {
-  Event.findById(req.params.id)
+  Event.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .populate('host')
   .then(event => {
     res.json(event)

@@ -30,6 +30,8 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({ user: authService.getUser() })
   }
+  
+  
 
   render() {
     const { user } = this.state
@@ -75,10 +77,12 @@ class App extends Component {
         }/>
         <Route
         exact path='/events/:id/edit'
-        render={({location}) =>
+        render={({location, history}) =>
         <EditEvent
         handleEditEvent={this.handleEditEvent}
-        location={location}/>
+        location={location}
+        history ={history}
+        />
       }
         />'
 
