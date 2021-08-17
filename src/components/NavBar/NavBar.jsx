@@ -27,7 +27,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 			 />
 		 </Grid.Column>
 
-		 <Grid.Column>
+		 <Grid.Column style={{minHeight: '100vm'}}>
 			 <Sidebar.Pushable as={Segment}>
 				 <Sidebar
 					 as={Menu}
