@@ -8,12 +8,9 @@ const containerStyle = {
   height: '400px'
 };
 
-const center = {
-  lat: 42.9621248,
-  lng: -72.6532096
-};
+let center = { lat: 35.9604651, lng: -85.8070368 }
 
-const position = {
+let position = {
   lat: 43.0099506,
   lng: -72.67172359999999
 }
@@ -23,15 +20,18 @@ const onLoad = marker => {
 }
 
 class MapCard extends Component {
+  
   render() {
     return (
       <LoadScript
         googleMapsApiKey = {process.env.REACT_APP_API_KEY_GOOGLE}
       >
         <GoogleMap
+          id="map"
           mapContainerStyle={containerStyle}
           center={center}
           zoom={12}
+          
         >
           { /* Child components, such as markers, info windows, etc. */ }
           <Marker 

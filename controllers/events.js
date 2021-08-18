@@ -61,11 +61,17 @@ function show(req, res) {
 function createEvent(req, res) {
   axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${req.body.address}&key=${process.env.GEOCODING_API}`)
   .then(response => {
-    
+    console.log(response.data.results[0].geometry.location)
     req.body.host = req.user.profile
     Event.create(req.body)
     .then(event => {
-      res.json(event, )
+      event.loc = response.data.results[0].geometry.location
+      event.save()
+      .then(event => {
+
+        res.json(event)
+      })
+      
     })
   })
 }

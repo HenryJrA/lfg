@@ -5,6 +5,17 @@ export {
   Event
 }
 
+const locationSchema = new mongoose.Schema(
+  {
+    lat: String,
+    lng: String
+  },
+  {
+  timestamps: true,
+  }
+)
+
+
 const replySchema = new mongoose.Schema(
   {
     content: String,
@@ -32,7 +43,9 @@ const eventSchema = new mongoose.Schema(
     host: {type: Schema.Types.ObjectId, ref: "Profile"},
     address: String,
     comment: [commentSchema],
-    position: String,
+    name: String,
+    type: String,
+    loc: locationSchema,
     attendees: [{type: Schema.Types.ObjectId, ref: "Profile"}],
     date: {type: Date},
     time: {type: Date} 

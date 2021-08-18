@@ -1,0 +1,22 @@
+[
+  {
+    address_components: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    formatted_address: '42 Upper Eager Rd, Newfane, VT 05345, USA',
+    geometry: {
+      location: [Object],
+      location_type: 'ROOFTOP',
+      viewport: [Object]
+    },
+    place_id: 'ChIJl1PrmZkB4YkRug-cSKX51j4',
+    plus_code: {
+      compound_code: '285H+X8 Newfane, VT, USA',
+      global_code: '87M9285H+X8'
+    },
+    types: [ 'street_address' ]
+  }
+]

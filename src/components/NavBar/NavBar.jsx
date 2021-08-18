@@ -11,6 +11,7 @@ import {
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
+import MapCard from '../MapCard/MapCard'
 
 const NavBar = ({ user, handleLogout, history }) => {
 	const [visible, setVisible] = React.useState(false)
@@ -64,8 +65,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 
 				 <Sidebar.Pusher>
 					 <Segment basic>
-						 <Header as='h3'>Application Content</Header>
-						 <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+						 <MapCard />
 					 </Segment>
 				 </Sidebar.Pusher>
 			 </Sidebar.Pushable>
