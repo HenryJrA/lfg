@@ -30,8 +30,6 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({ user: authService.getUser() })
   }
-  
-  
 
   render() {
     const { user } = this.state
@@ -71,9 +69,9 @@ class App extends Component {
         }/>
 
         <Route
-        exact path='/profile/:id/update'
-        render={({location}) =>
-            <ProfileUpdate location={location} />
+        exact path='/profile/update'
+        render={({location, history}) =>
+            <ProfileUpdate history={history} location={location} />
         }/>
         <Route
         exact path='/events/:id/edit'
