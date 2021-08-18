@@ -11,7 +11,9 @@ const EventDetails = ({user, history, location}) => {
     
     <>
     <h1>{location.state.event.name}</h1>
-    <MapCard />
+    <MapCard 
+    event={location.state.event}
+    />
     <h2>{location.state.event.address}</h2>
     <h3>{location.state.event.host.name}</h3>
     <h5>{location.state.event.host.pronouns}</h5>
