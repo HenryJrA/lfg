@@ -29,13 +29,9 @@ class SignupForm extends Component {
   }
 
   handleChange = e => {
-        console.log(e.target)
-        const formData = {...this.state.formData, [e.target.name]: e.target.value};
-    		this.setState({
-    		formData,
-    		invalidForm: !this.formRef.current.checkValidity()
-    		});
-    	};
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
     
   handleSubmit = async e => {
     const { history, updateMessage, handleSignupOrLogin } = this.props
