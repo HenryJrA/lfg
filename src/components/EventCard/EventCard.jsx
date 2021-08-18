@@ -11,7 +11,8 @@ const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent, hand
     <h1>{event?.name}</h1>
     <h1>{event?.address}</h1>
     <h2>{event?.host?.name}</h2>
-    {event?.host._id !== user.profile && event.attendees.every(person => person._id !== user.profile) &&
+    {event.host._id !== user.profile && event.attendees.every(person => person._id !== user.profile) &&
+ main
     <button onClick={() => handleAddEvent(event._id)}>Join Event</button>
     }
     {event?.host._id !== user.profile && event.attendees.some(person => person._id === user.profile) &&
@@ -25,7 +26,9 @@ const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent, hand
   <button>Edit Event</button>  
    </Link> 
   }
-    {/* <MapCard /> */}
+    <MapCard
+    event={event}
+    />
     </>
   
   );

@@ -65,7 +65,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 
 				 <Sidebar.Pusher>
 					 <Segment basic>
-						 <MapCard />
+						 {/* <MapCard /> */}
 					 </Segment>
 				 </Sidebar.Pusher>
 			 </Sidebar.Pushable>
