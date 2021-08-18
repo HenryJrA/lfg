@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
-import { Form, Input, Button, Select } from 'semantic-ui-react'
+import { Form, Button, Select } from 'semantic-ui-react'
 
 
 const genderOptions = [
@@ -28,11 +28,15 @@ class SignupForm extends Component {
     this.setState({ gender: data.value})
   }
 
-   handleChange = e => {
-    this.props.updateMessage('')
-    this.setState({ [e.target.name]: e.target.value })
-  }
-
+  handleChange = e => {
+        console.log(e.target)
+        const formData = {...this.state.formData, [e.target.name]: e.target.value};
+    		this.setState({
+    		formData,
+    		invalidForm: !this.formRef.current.checkValidity()
+    		});
+    	};
+    
   handleSubmit = async e => {
     const { history, updateMessage, handleSignupOrLogin } = this.props
     e.preventDefault()
