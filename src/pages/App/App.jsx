@@ -13,6 +13,7 @@ import ProfileDetails from '../ProfileDetails/ProfileDetails'
 import ProfileUpdate from '../ProfileUpdate/ProfileUpdate'
 import EditEvent from '../EditEvent/EditEvent'
 import * as eventService from '../../services/eventService'
+import EventDetails from '../EventDetails/EventDetails'
 
 
 
@@ -83,6 +84,17 @@ class App extends Component {
         />
       }
         />
+        <Route
+        exact path='/events/:id'
+        render={({location, history})=> 
+        <EventDetails 
+        user={user}
+        location={location}
+        history ={history}
+        />
+
+      }
+      />
 
       </>
     )
