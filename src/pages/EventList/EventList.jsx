@@ -14,8 +14,12 @@ class EventList extends Component {
   }
   
 
-  handleAddEvent = (id) => {
-    console.log(id)
+  handleAddEvent = async eventData => {
+    const event = await eventService.createEvent(eventData)
+    const events = [...this.state.events]
+    events.push(event)
+    this.setState({events})
+    this.props.history.push('/events')
   }
 
   handleLeaveEvent = (id) => {
@@ -23,7 +27,8 @@ class EventList extends Component {
   }
   handleDeleteEvent = async id => {
     const deleteEvent = await eventService.deleteEvent(id)
-    this.setState({ user: deleteEvent})
+    const events = this.state.events.filter(event => event._id !== id)
+    this.setState({ events })
     
   }
   handleEditEvent = async id => {
@@ -36,6 +41,8 @@ class EventList extends Component {
       <>
       <CreateEventForm 
       history={this.props.history}
+      handleAddEvent={this.handleAddEvent}
+      user={this.props.user}
       />
       {this.state.events.map(event => 
       <EventCard 
