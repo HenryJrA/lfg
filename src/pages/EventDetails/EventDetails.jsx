@@ -1,7 +1,7 @@
-import React from 'react';
 import React, { Component } from 'react';
 import * as eventServices from '../../services/e'
 import EventCard from '../../components/EventCard/EventCard';
+import CommentForm from '../../components/CommentForm/CommentForm';
 class EventDetails extends Component {
   state = { 
 
@@ -10,16 +10,17 @@ class EventDetails extends Component {
     return ( 
       <>
       <div className='eventList'>
-  {props.events.map(event =>
-    <EventCard
-      key={event._id}
-      event={event}
-      user={this.props.user}
-      handleDeleteEvent={props.handleDeleteEvent}
-      handleEditEvent = {props.handleEditEvent}
-    />
-  )}
-</div>
+      {this.props.events.map(event =>
+        <EventCard
+          key={event._id}
+          event={event}
+          user={this.props.user}
+          handleDeleteEvent={this.props.handleDeleteEvent}
+          handleEditEvent = {this.props.handleEditEvent}
+        />
+      )}
+      </div>
+      <CommentForm />
       </>
      );
   }
