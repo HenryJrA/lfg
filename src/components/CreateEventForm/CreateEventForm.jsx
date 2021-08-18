@@ -15,7 +15,7 @@ const gameTypes = [
 
 class CreateEventForm extends Component {
   state = { 
-    host: this.props.user,
+    host: this.props.user.profile,
     type:"",
     name: "",
     address: "",
@@ -34,10 +34,9 @@ class CreateEventForm extends Component {
 
   handleSubmit = e => {
 		e.preventDefault();
-  eventService.createEvent(this.state.formData)
-  .then(res=> this.props.history.push('/events'))
-    
+  this.props.handleAddEvent(this.state)
   };
+
   handleDeleteEvent = e => {
     e.preventDefault()
     this.props.handleDeleteEvent(this.state.formData)

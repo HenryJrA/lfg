@@ -8,7 +8,7 @@ export {
 }
 
 function update(req, res) {
-  Profile.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  Profile.findByIdAndUpdate(req.body._id, req.body, {new: true})
   .then(profile => {
     res.json(profile)
   })
