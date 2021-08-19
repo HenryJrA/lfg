@@ -11,14 +11,16 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
     <>
     <div className={styles.container}>
 
-    <h1>{location.state.event.name}</h1>
+    <h1>Event Name:<br/> {location.state.event.name}</h1>
     <MapCard 
     event={location.state.event}
     />
-    <h2>{location.state.event.address}</h2>
-    <h3>{location.state.event.host.name}</h3>
-    <h5>{location.state.event.host.pronouns}</h5>
-   
+    <h2>Event Address: <br/>{location.state.event.address}</h2>
+    <h3>Host: <br/>{location.state.event.host.name}</h3>
+    <h4>Gender: <br/>{location.state.event.host.gender}</h4>
+    <h5>Pronouns: <br/>{location.state.event.host.pronouns}</h5>
+   <div>
+
    <CommentForm 
     user={user.profile}
     handleAddComment={handleAddComment}
@@ -26,11 +28,19 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
     
     />
     {location.state.event.comment.map(comment =>
-      <div>
-        {comment.content}
+      <div className={styles.container}>
+        <h3>
+        Comments: 
+        </h3>
+        <h4>
+
+          {user.name} says:
+          </h4>
+           {comment.content}
       </div>
       )}
     </div>
+   </div>
 
     </>
    );
@@ -41,30 +51,4 @@ export default EventDetails;
 
 
 
-
-// this.props.// class EventDetails extends Component {
- 
-
-//    }
-//   render() { 
-//     return ( 
-//       <>
-//       <div className='eventList'>
-//       {this.props.events.map(event =>
-//         <EventCard
-//           key={event._id}
-//           event={event}
-//           user={this.props.user}
-//           handleDeleteEvent={this.props.handleDeleteEvent}
-//           handleEditEvent = {this.props.handleEditEvent}
-//         />
-//       )}
-//       </div>
-//       <CommentForm />
-//       </>
-//      );
-//   }
-// }
- 
-// export default EventDetails;
 
