@@ -1,6 +1,6 @@
 import React, { Component, Link } from 'react';
 import * as eventService from '../../services/eventService'
-import * as apiService from '../../services/apiService'
+
 import { Form, Button, Select } from 'semantic-ui-react';
 import styles from './CreateEventForm.module.css'
 
