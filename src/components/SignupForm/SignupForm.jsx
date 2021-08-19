@@ -8,7 +8,7 @@ import { Form, Button, Select } from 'semantic-ui-react'
 const genderOptions = [
   { key: 'm', text: 'Male', value: 'male' },
   { key: 'f', text: 'Female', value: 'female' },
-  { key: 'o', text: 'Non-Binary', value: 'other' },
+  { key: 'o', text: 'Non-Binary', value: 'Non-Binary' },
 ]
 
 
