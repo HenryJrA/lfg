@@ -14,6 +14,7 @@ Click here (https://lfg-project.herokuapp.com/)./
 
 ## How it looks now:
 <img src='public/readmeimg/webapp.png'>
+
 ## Technology Used:
 - React  
 - Mongoose
@@ -36,16 +37,16 @@ Click here (https://lfg-project.herokuapp.com/)./
 
 ## Stretch Goals:
 
-- AAU, I want to limit the search range to a set mileage.
-- AAU, I want to see events on a map.
-- AAU, I want to have additional categories beyond gaming within the application.
-- AAU, I want to be able to friend other users.
-- AAU, I want to be updated with events near me.
-- AAU, I want to be able to show my status for an event.
-- AAU, I want to see other users' statuses for an event.
-- AAU, I want to follow/unfollow a category.
-- AAU, I want to be able to search for events by category.
-- AAU, I want to be able to friend/unfriend other users.
-- AAU, I want to be able to leave comments/replies to an event.
-- AAU, I want to be able to leave a review for the event with a rating system.
-- AAU, I want to be able to use the app on my phone.
+- [ ] AAU, I want to limit the search range to a set mileage.
+- [ ] AAU, I want to see events on a map.
+- [ ] AAU, I want to have additional categories beyond gaming within the application.
+- [ ] AAU, I want to be able to friend other users.
+- [ ] AAU, I want to be updated with events near me.
+- [ ] AAU, I want to be able to show my status for an event.
+- [ ] AAU, I want to see other users' statuses for an event.
+- [ ] AAU, I want to follow/unfollow a category.
+- [ ] AAU, I want to be able to search for events by category.
+- [ ] AAU, I want to be able to friend/unfriend other users.
+- [ ] AAU, I want to be able to leave comments/replies to an event.
+- [ ] AAU, I want to be able to leave a review for the event with a rating system.
+- [ ] AAU, I want to be able to use the app on my phone.
