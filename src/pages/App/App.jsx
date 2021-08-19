@@ -1,21 +1,19 @@
 import React, { Component } from 'react'
 import { Route, Redirect } from 'react-router-dom'
-import EventCard from '../../components/EventCard/EventCard'
+
+import * as eventService from '../../services/eventService'
+import * as authService from '../../services/authService'
+
 import EventList from '../EventList/EventList'
 import NavBar from '../../components/NavBar/NavBar'
 import Signup from '../Signup/Signup'
 import Login from '../Login/Login'
 import Landing from '../Landing/Landing'
-import StateLocation from '../../components/StateLocaltion/StateLocation'
-import * as authService from '../../services/authService'
 import ProfileList from '../ProfileList/ProfileList'
 import ProfileDetails from '../ProfileDetails/ProfileDetails'
 import ProfileUpdate from '../ProfileUpdate/ProfileUpdate'
 import EditEvent from '../EditEvent/EditEvent'
-import * as eventService from '../../services/eventService'
 import EventDetails from '../EventDetails/EventDetails'
-
-
 
 
 class App extends Component {
@@ -36,6 +34,7 @@ class App extends Component {
  handleAddComment = async (comment, event) =>{
   const updatedAddCommentInEvent = await eventService.addComment(comment, event)
   const events = this.state.events
+  this.setState(events)
  }
 
   render() {

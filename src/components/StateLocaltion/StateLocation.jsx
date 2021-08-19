@@ -8,7 +8,7 @@ class StateLocation extends Component {
     user: this.props.user
    }
 
-
+// to be used later to hold state per geographical region
 
   render = () => { 
     return ( 

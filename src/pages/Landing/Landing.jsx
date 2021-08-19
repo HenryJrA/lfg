@@ -8,7 +8,7 @@ const Landing = ({user, history}) => {
         hello, {user ? user.name : "friend"}
       </h1>
       <h2>
-        <StateLocation 
+        {/* <StateLocation 
         history={history}
         user={user}
            isMarkerShown
@@ -16,7 +16,7 @@ const Landing = ({user, history}) => {
            loadingElement={<div style={{ height: `100%` }} />}
            containerElement={<div style={{ height: `400px` }} />}
            mapElement={<div style={{ height: `100%` }} />}
-           />
+           /> */}
          </h2>
        </main>
      )

@@ -108,22 +108,9 @@ class SignupForm extends Component {
             searchInput={{ id: 'form-select-control-gender' }}
             required
             onChange={this.onSelectChange}
-            >
-              {/* <label
-              children='gender'
-              htmlFor='form-select-control-gender'>Gender</label>
-              <input
-                type='select'
-                options={genderOptions}
-                search
-                searchInput={{ id: 'form-select-control-gender' }}
-                required
-                onChange={}
-              /> */}
-              
+            > 
             </Form.Field>
             <Form.Field
-           
             >
               <label
               htmlFor='pronouns'>Pronouns</label>
@@ -154,9 +141,7 @@ class SignupForm extends Component {
                placeholder='Enter password'
                required
                />
-              </Form.Field>
-                
-           
+              </Form.Field>               
               <Form.Field>
               <label
               htmlFor='passwordConf'>Confirm password</label>
@@ -183,9 +168,6 @@ class SignupForm extends Component {
                 </Link>
             </Button.Group>
 
-          
-
-
       </Form>
 
      );
@@ -193,132 +175,3 @@ class SignupForm extends Component {
 }
  
 export default SignupForm;
-
-
-// import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
-// import styles from './SignupForm.module.css'
-// import * as authService from '../../services/authService'
-
-// class SignupForm extends Component {
-//   state = {
-//     name: '',
-//     email: '',
-//     gender: '',
-//     pronouns: '',
-//     password: '',
-//     passwordConf: '',
-//   }
-
-//   handleChange = e => {
-//     this.props.updateMessage('')
-//     this.setState({
-//       [e.target.name]: e.target.value,
-//     })
-//   }
-
-//   handleSubmit = async e => {
-//     const { history, updateMessage, handleSignupOrLogin } = this.props
-//     e.preventDefault()
-//     try {
-//       await authService.signup(this.state)
-//       handleSignupOrLogin()
-//       history.push('/')
-//     } catch (err) {
-//       updateMessage(err.message)
-//     }
-//   }
-
-//   isFormInvalid() {
-//     const { name, email, password, passwordConf } = this.state
-//     return !(name && email && password === passwordConf)
-//   }
-
-//   render() {
-//     const { name, email, gender, pronouns, password, passwordConf } = this.state
-//     return (
-//       <form
-//         autoComplete="off"
-//         onSubmit={this.handleSubmit}
-//         className={styles.container}
-//       >
-//         <div className={styles.inputContainer}>
-//           <label htmlFor="name" className={styles.label}>
-//             Name
-//           </label>
-//           <input
-//             type="text"
-//             autoComplete="off"
-//             id="name"
-//             value={name}
-//             name="name"
-//             onChange={this.handleChange}
-//           />
-//         </div>
-//         <div className={styles.inputContainer}>
-//           <label htmlFor="email" className={styles.label}>Email</label>
-//           <input
-//             type="text"
-//             autoComplete="off"
-//             id="email"
-//             value={email}
-//             name="email"
-//             onChange={this.handleChange}
-//           />
-//         </div>
-//         <div className={styles.inputContainer}>
-//           <label htmlFor="gender" className={styles.label}>Gender</label>
-//           <input
-//             type="gender"
-//             autoComplete="off"
-//             id="gender"
-//             value={gender}
-//             name="gender"
-//             onChange={this.handleChange}
-//           />
-//         </div>
-//         <div className={styles.inputContainer}>
-//           <label htmlFor="pronouns" className={styles.label}>Pronouns</label>
-//           <input
-//             type="pronouns"
-//             autoComplete="off"
-//             id="pronouns"
-//             value={pronouns}
-//             name="pronouns"
-//             onChange={this.handleChange}
-//           />
-//         </div>
-//         <div className={styles.inputContainer}>
-//           <label htmlFor="password" className={styles.label}>Password</label>
-//           <input
-//             type="password"
-//             autoComplete="off"
-//             id="password"
-//             value={password}
-//             name="password"
-//             onChange={this.handleChange}
-//           />
-//         </div>
-//         <div className={styles.inputContainer}>
-//           <label htmlFor="confirm" className={styles.label}>Confirm<br/>Password</label>
-//           <input
-//             type="password"
-//             autoComplete="off"
-//             id="confirm"
-//             value={passwordConf}
-//             name="passwordConf"
-//             onChange={this.handleChange}
-//           />
-//         </div>
-//         <div className={styles.inputContainer}>
-//           <button disabled={this.isFormInvalid()} className={styles.button}>Sign Up</button>
-//           <Link to="/">
-//             <button>Cancel</button>
-//           </Link>
-//         </div>
-//       </form>
-//     )
-//   }
-// }
-
-// export default SignupForm

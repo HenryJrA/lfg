@@ -1,10 +1,9 @@
 import React from 'react';
 import * as eventServices from '../../services/eventService'
-import EventCard from '../../components/EventCard/EventCard';
-import CommentForm from '../../components/CommentForm/CommentForm';
-
 
 import MapCard from '../../components/MapCard/MapCard';
+import CommentForm from '../../components/CommentForm/CommentForm';
+
 
 const EventDetails = ({user, history, location, handleAddComment}) => {
   console.log(user.profile)
