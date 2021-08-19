@@ -65,7 +65,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 
 				 <Sidebar.Pusher>
 					 <Segment basic>
-						 {/* <MapCard /> */}
+					 <Image src='https://www.wpp.com/-/media/project/wpp/images/voices/gaming-wt-intelligence.jpg?width=2568&height=1445' />
 					 </Segment>
 				 </Sidebar.Pusher>
 			 </Sidebar.Pushable>
@@ -109,8 +109,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 	
 						<Sidebar.Pusher>
 							<Segment basic>
-								<Header as='h3'>Application Content</Header>
-								<Image src='public/lfg_web.png' />
+							<Image src='https://www.wpp.com/-/media/project/wpp/images/voices/gaming-wt-intelligence.jpg?width=2568&height=1445' />
 							</Segment>
 						</Sidebar.Pusher>
 					</Sidebar.Pushable>
