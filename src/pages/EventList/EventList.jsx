@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+
 import CreateEventForm from '../../components/CreateEventForm/CreateEventForm'
 import EventCard from '../../components/EventCard/EventCard'
 import * as eventService from '../../services/eventService'
+import styles from './EventList.module.css'
+
 
 class EventList extends Component {
   state = {
@@ -40,13 +43,17 @@ class EventList extends Component {
     
     return (
       <>
+      <>
+        <div className={styles.container}>
+
       <CreateEventForm 
       history={this.props.history}
       handleAddEvent={this.handleAddEvent}
       user={this.props.user.profile}
       />
       {this.state.events.map(event => 
-      <EventCard 
+
+<EventCard 
       handleAddEvent={this.handleAddEvent}
       handleLeaveEvent={this.handleLeaveEvent}
       handleDeleteEvent={this.handleDeleteEvent}
@@ -56,6 +63,8 @@ class EventList extends Component {
       user={this.props.user.profile}
       />
       )}
+      </div>
+      </>
       </>
     );
   }
