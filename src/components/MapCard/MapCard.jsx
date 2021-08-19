@@ -2,18 +2,11 @@ import React, { Component } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 
-
-
 const containerStyle = {
   width: '400px',
   height: '400px'
 };
 
-// let center = { lat: "40.7222993" , lng: "-73.99590409999999"
-// }
-
-// let position = { lat: "40.7222993" , lng: "-73.99590409999999"}
- 
 
 const onLoad = marker => {
   console.log('marker: ', marker)
@@ -25,12 +18,6 @@ class MapCard extends Component {
     position: {},
     event: []
   }
-  
-  // async componentDidMount(){
-  //   const events = await eventService.getAllEvents()
-  //   console.log({events})
-  //   this.setState({ events  })
-  // }
   
   render() {
       console.log(this.props)
@@ -46,7 +33,7 @@ class MapCard extends Component {
           center={{
            lat: parseFloat(this.props.event?.loc?.lat),
            lng: parseFloat(this.props.event?.loc?.lng)}}
-          zoom={10}
+          zoom={15}
           
           
         >
