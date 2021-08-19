@@ -4,7 +4,9 @@ export {
   userProfile,
   index,
   editProfile as edit,
-  update
+  update,
+  joinEvent,
+  leaveEvent
 }
 
 function update(req, res) {
@@ -39,3 +41,25 @@ function userProfile(req, res) {
     res.json(profile)
   })
 }
+
+function joinEvent(req, res) {
+  Profile.findById(req.user.profile)
+  .populate('events')
+  .then(profile => {
+    profile.events.push(req.params.id)
+  profile.save()
+  .then(()=> res.json(profile))
+  })
+
+ }
+
+ function leaveEvent(req, res) {
+  Profile.findById(req.user.profile)
+  .populate('events')
+  .then(profile => {
+    profile.events.remove(req.params.id)
+  profile.save()
+  .then(()=> res.json(profile))
+  })
+
+ }
