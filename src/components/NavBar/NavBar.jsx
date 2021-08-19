@@ -110,7 +110,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 						<Sidebar.Pusher>
 							<Segment basic>
 								<Header as='h3'>Application Content</Header>
-								<Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+								<Image src='public/lfg_web.png' />
 							</Segment>
 						</Sidebar.Pusher>
 					</Sidebar.Pushable>

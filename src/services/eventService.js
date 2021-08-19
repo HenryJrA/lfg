@@ -45,3 +45,14 @@ export function editEvent(id, formData){
   )
   .then(res => res.json())
 }
+
+export function addComment(formData, id) {
+  return fetch(`${BASE_URL}${id}`, {
+  method: "POST",
+    headers: { Authorization: "Bearer " + tokenService.getToken(), "content-type": "application/json" },
+    body: JSON.stringify(formData),
+  },
+  { mode: "cors"}
+  )
+  .then(res => res.json())
+}

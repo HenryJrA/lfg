@@ -13,6 +13,8 @@ import ProfileDetails from '../ProfileDetails/ProfileDetails'
 import ProfileUpdate from '../ProfileUpdate/ProfileUpdate'
 import EditEvent from '../EditEvent/EditEvent'
 import * as eventService from '../../services/eventService'
+import EventDetails from '../EventDetails/EventDetails'
+
 
 
 
@@ -30,6 +32,11 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({ user: authService.getUser() })
   }
+
+ handleAddComment = async (comment, event) =>{
+  const updatedAddCommentInEvent = await eventService.addComment(comment, event)
+  const events = this.state.events
+ }
 
   render() {
     const { user } = this.state
@@ -83,6 +90,18 @@ class App extends Component {
         />
       }
         />
+        <Route
+        exact path='/events/:id'
+        render={({location, history})=> 
+        <EventDetails 
+        handleAddComment={this.handleAddComment}
+        user={user}
+        location={location}
+        history ={history}
+        />
+
+      }
+      />
 
       </>
     )

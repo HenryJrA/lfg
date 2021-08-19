@@ -8,8 +8,23 @@ export {
   show,
   update,
   editEvent as edit,
-  createEvent
+  createEvent,
+  addComment
 }
+
+function addComment(req,res){
+  Event.findById(req.params.id )
+  .populate('author')
+  .then(event => {
+    console.log(event)
+   event.comment.push(req.body)
+   event.save()
+   .then((event)=> {
+     res.json(event)
+   })
+  })
+}
+
 
 function editEvent(req, res) {
   Event.findByIdAndUpdate(req.params.id, req.body, {new: true})

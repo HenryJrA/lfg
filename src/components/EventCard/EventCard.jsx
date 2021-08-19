@@ -6,16 +6,24 @@ import MapCard from '../MapCard/MapCard';
 const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent, handleDeleteEvent, handleEditEvent}) => {
 
   return (
-    event &&
+
     <>
-    <h1>{event?.name}</h1>
-    <h1>{event?.address}</h1>
+    <Link
+    to={{
+      pathname: `/events/${event._id}`,
+      state: {event}
+    }}
+    >
+    <h2>{event?.name}</h2>
+    </Link>
+    
     <h2>{event?.host?.name}</h2>
+    <h2>{event?.host?.gender}</h2>
+    <h1>{event?.address}</h1>
     {event.host._id !== user.profile && event.attendees.every(person => person._id !== user.profile) &&
- main
     <button onClick={() => handleAddEvent(event._id)}>Join Event</button>
     }
-    {event?.host._id !== user.profile && event.attendees.some(person => person._id === user.profile) &&
+    {event.host._id !== user.profile && event.attendees.some(person => person._id === user.profile) &&
     <button onClick={() => handleLeaveEvent(event._id)}>Leave Event</button>
     }
 {event.host._id === user.profile && event.attendees.every(person => person._id !== user.profile) &&
