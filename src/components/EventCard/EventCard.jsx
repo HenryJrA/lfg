@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MapCard from '../MapCard/MapCard';
+import styles from './EventCard.module.css'
 
 
 const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent, handleDeleteEvent, handleEditEvent}) => {
@@ -8,6 +9,9 @@ const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent, hand
   return (
 
     <>
+   
+    <div className={styles.container}>
+
     <Link
     to={{
       pathname: `/events/${event._id}`,
@@ -34,9 +38,14 @@ const EventCard = ({event, user, history, handleAddEvent, handleLeaveEvent, hand
   <button>Edit Event</button>  
    </Link> 
   }
+   
+   
+
     <MapCard
     event={event}
     />
+    
+    </div>
     </>
   
   );

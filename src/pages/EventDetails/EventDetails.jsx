@@ -3,12 +3,14 @@ import * as eventServices from '../../services/eventService'
 
 import MapCard from '../../components/MapCard/MapCard';
 import CommentForm from '../../components/CommentForm/CommentForm';
-
+import styles from './EventDetails.module.css'
 
 const EventDetails = ({user, history, location, handleAddComment}) => {
   console.log(user.profile)
   return ( 
     <>
+    <div className={styles.container}>
+
     <h1>{location.state.event.name}</h1>
     <MapCard 
     event={location.state.event}
@@ -28,6 +30,7 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
         {comment.content}
       </div>
       )}
+    </div>
 
     </>
    );

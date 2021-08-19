@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import styles from './ProfileCard.module.css'
 
 const ProfileCard = ({profile}) => {
   return (
     <>
+    <div className={styles.container}>
+
       <Link
         to={{
           pathname: '/profile',
@@ -12,6 +15,7 @@ const ProfileCard = ({profile}) => {
       >
         <h2>{profile.name}</h2>
       </Link>
+    </div>
         
     </>
   )
