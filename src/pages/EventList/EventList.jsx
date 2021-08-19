@@ -43,7 +43,7 @@ class EventList extends Component {
       <CreateEventForm 
       history={this.props.history}
       handleAddEvent={this.handleAddEvent}
-      user={this.props.user}
+      user={this.props.user.profile}
       />
       {this.state.events.map(event => 
       <EventCard 
@@ -53,7 +53,7 @@ class EventList extends Component {
       handleEditEvent={this.handleEditEvent}
       event={event}
       key={event._id}
-      user={this.props.user}
+      user={this.props.user.profile}
       />
       )}
       </>

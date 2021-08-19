@@ -6,9 +6,9 @@ import CommentForm from '../../components/CommentForm/CommentForm';
 
 import MapCard from '../../components/MapCard/MapCard';
 
-const EventDetails = ({user, history, location}) => {
+const EventDetails = ({user, history, location, handleAddComment}) => {
+  console.log(user.profile)
   return ( 
-    
     <>
     <h1>{location.state.event.name}</h1>
     <MapCard 
@@ -17,7 +17,18 @@ const EventDetails = ({user, history, location}) => {
     <h2>{location.state.event.address}</h2>
     <h3>{location.state.event.host.name}</h3>
     <h5>{location.state.event.host.pronouns}</h5>
-    <CommentForm />
+   
+   <CommentForm 
+    user={user.profile}
+    handleAddComment={handleAddComment}
+    event={location.state.event._id}
+    
+    />
+    {location.state.event.comment.map(comment =>
+      <div>
+        {comment.content}
+      </div>
+      )}
 
     </>
    );
