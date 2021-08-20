@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Atarian";
+  src: url('./fonts/SF\ Atarian\ System.ttf');
+}
+
+@font-face {
+  font-family: "Galatica";
+  src: url('./fonts/GalacticaGrid.ttf');
+}

@@ -11,14 +11,25 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
     <>
     <div className={styles.container}>
 
-    <h1>{location.state.event.name}</h1>
+    <h1 className={styles.h1}>Event Name: </h1>
+      
+      <h1 className={styles.h3}>{location.state.event.name}</h1>
     <MapCard 
     event={location.state.event}
     />
-    <h2>{location.state.event.address}</h2>
-    <h3>{location.state.event.host.name}</h3>
-    <h5>{location.state.event.host.pronouns}</h5>
-   
+    <h1 className={styles.h1}>Event Address:</h1> 
+    <h2 className={styles.h3}>{location.state.event.address}</h2>
+    <h1 className={styles.h1}>Host: </h1>
+    <h2 className={styles.h3}> {location.state.event.host.name}</h2>
+    <h1 className={styles.h1}>Gender: </h1>
+     <h2 className={styles.h3}> {location.state.event.host.gender}</h2>
+      
+    <h1 className={styles.h1}>Pronouns: </h1>
+      <h2 className={styles.h3}>{location.state.event.host.pronouns}</h2>
+        
+        
+   <div>
+
    <CommentForm 
     user={user.profile}
     handleAddComment={handleAddComment}
@@ -26,11 +37,19 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
     
     />
     {location.state.event.comment.map(comment =>
-      <div>
-        {comment.content}
+      <div className={styles.h1}>
+        <h3 className={styles.h1}>
+        Comments: 
+        </h3>
+        <h3 className={styles.h3}>
+
+          {user.name} says:
+          </h3>
+           {comment.content}
       </div>
       )}
     </div>
+   </div>
 
     </>
    );
@@ -41,30 +60,4 @@ export default EventDetails;
 
 
 
-
-// this.props.// class EventDetails extends Component {
- 
-
-//    }
-//   render() { 
-//     return ( 
-//       <>
-//       <div className='eventList'>
-//       {this.props.events.map(event =>
-//         <EventCard
-//           key={event._id}
-//           event={event}
-//           user={this.props.user}
-//           handleDeleteEvent={this.props.handleDeleteEvent}
-//           handleEditEvent = {this.props.handleEditEvent}
-//         />
-//       )}
-//       </div>
-//       <CommentForm />
-//       </>
-//      );
-//   }
-// }
- 
-// export default EventDetails;
 

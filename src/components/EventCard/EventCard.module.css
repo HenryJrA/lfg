@@ -1,7 +1,21 @@
 .container {
+  margin: 2vmin;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  
+  padding: initial;
 }
+
+h1{
+  font-family:fantasy
+}
+
+h3{
+  font-family:serif;
+  font-weight: bolder;
+  font-size: large;
+}
+
