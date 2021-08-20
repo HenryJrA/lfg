@@ -4,4 +4,19 @@
   justify-content: center;
   align-items: center;
   margin: 50px;
+  background-image: url(https://img.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg?size=626&ext=jpg);
+  color: chartreuse;
+}
+
+p{
+  
+}
+
+h1{
+  font-family:fantasy;
+  font-weight: bolder;
+}
+
+h3{
+  font-family:serif
 }

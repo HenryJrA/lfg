@@ -43,7 +43,7 @@ class EventList extends Component {
     
     return (
       <>
-      <>
+      
         <div className={styles.container}>
 
       <CreateEventForm 
@@ -53,7 +53,7 @@ class EventList extends Component {
       />
       </div>
       {this.state.events.map(event => 
-  <div>
+  <div className={styles.container}>
 
 <EventCard 
       handleAddEvent={this.handleAddEvent}
@@ -66,7 +66,6 @@ class EventList extends Component {
       />
   </div>
       )}
-      </>
       </>
     );
   }

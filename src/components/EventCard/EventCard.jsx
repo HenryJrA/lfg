@@ -16,31 +16,33 @@ const EventCard = ({
     <>
       <div className={styles.container}>
         <div className={styles.container}>
-          <h2>Event Name:</h2>
+          <h1 className={styles.h1}>Event Name:</h1>
           <Link
             to={{
               pathname: `/events/${event._id}`,
               state: { event },
             }}
           >
-            <h2>{event?.name}</h2>
+            <h1>{event?.name}</h1>
           </Link>
         
           <MapCard event={event} />
         </div>
 
         <div className={styles.container}>
-          <h1>
-            Event Adress :<br /> {event?.address}
+          <h1 className={styles.h1}>
+            Event Adress :<br /> 
+            
           </h1>
-          <h2>
-            Host :<br /> {event?.host?.name}
-          </h2>
-
-          <h2>
-            Pronouns :<br /> {event?.host?.pronouns}
-          </h2>
-        
+            <h3 className={styles.h3}>{event?.address}</h3>
+          <h1 className={styles.h1}>
+            Host :
+          </h1>
+            <h3 className={styles.h3} >{event?.host?.name}</h3>
+          <h1 className={styles.h1}>
+            Pronouns : 
+          </h1>
+            <h3 className={styles.h3}>{event?.host?.pronouns}</h3>
         {event.host._id !== user &&
           event.attendees.every((person) => person._id !== user) && (
             <button onClick={() => handleAddEvent(event._id)}>

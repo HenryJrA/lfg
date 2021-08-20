@@ -8,3 +8,14 @@
   
   padding: initial;
 }
+
+h1{
+  font-family:fantasy
+}
+
+h3{
+  font-family:serif;
+  font-weight: bolder;
+  font-size: large;
+}
+

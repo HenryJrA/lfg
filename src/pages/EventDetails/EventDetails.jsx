@@ -11,14 +11,23 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
     <>
     <div className={styles.container}>
 
-    <h1>Event Name:<br/> {location.state.event.name}</h1>
+    <h1 className={styles.h1}>Event Name: </h1>
+      
+      <h1 className={styles.h3}>{location.state.event.name}</h1>
     <MapCard 
     event={location.state.event}
     />
-    <h2>Event Address: <br/>{location.state.event.address}</h2>
-    <h3>Host: <br/>{location.state.event.host.name}</h3>
-    <h4>Gender: <br/>{location.state.event.host.gender}</h4>
-    <h5>Pronouns: <br/>{location.state.event.host.pronouns}</h5>
+    <h1 className={styles.h1}>Event Address:</h1> 
+    <h2 className={styles.h3}>{location.state.event.address}</h2>
+    <h1 className={styles.h1}>Host: </h1>
+    <h2 className={styles.h3}> {location.state.event.host.name}</h2>
+    <h1 className={styles.h1}>Gender: </h1>
+     <h2 className={styles.h3}> {location.state.event.host.gender}</h2>
+      
+    <h1 className={styles.h1}>Pronouns: </h1>
+      <h2 className={styles.h3}>{location.state.event.host.pronouns}</h2>
+        
+        
    <div>
 
    <CommentForm 
@@ -28,14 +37,14 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
     
     />
     {location.state.event.comment.map(comment =>
-      <div className={styles.container}>
-        <h3>
+      <div className={styles.h1}>
+        <h3 className={styles.h1}>
         Comments: 
         </h3>
-        <h4>
+        <h3 className={styles.h3}>
 
           {user.name} says:
-          </h4>
+          </h3>
            {comment.content}
       </div>
       )}
