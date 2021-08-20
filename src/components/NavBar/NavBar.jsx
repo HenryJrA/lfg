@@ -23,7 +23,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 		 <Grid.Column>
 			 <Checkbox
 				 checked={visible}
-				 label={{ children: <code>visible</code> }}
+				 label={{ children: <code>🏠</code> }}
 				 onChange={(e, data) => setVisible(data.checked)}
 			 />
 		 </Grid.Column>
@@ -76,7 +76,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 				<Grid.Column>
 					<Checkbox
 						checked={visible}
-						label={{ children: <code>visible</code> }}
+						label={{ children: <code>🏠</code> }}
 						onChange={(e, data) => setVisible(data.checked)}
 					/>
 				</Grid.Column>
