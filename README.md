@@ -19,7 +19,7 @@ As a group we quickly found out that we all enjoyed playing games.  However, we 
 
 ## How it looks now:
 <img src='public/readmeimg/webapp.png'>
-<img src='public/readmeimg/lfg.png>
+<img src='public/readmeimg/lfg.png'>
 
 ## Technology Used:
 - React  
