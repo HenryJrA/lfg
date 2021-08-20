@@ -1,6 +1,7 @@
 ##  Objective:
 Create an app where you can socialize and meet new people, and have a 
 ## Motivation:
+As a group we quickly found out that we all enjoyed playing games.  However, we all like to play different types of games.  Because of this, we thought it would be a great idea to try and link together who enjoying play the same games.  Some games are only playable with multiple people and others are just more fun when played with people you know.  We hope that through this app people are able to meet others and enhance their gaming experience regardless of the game.
 
 ## To Checkout the app:
 [Click here](https://lfg-project.herokuapp.com/).
