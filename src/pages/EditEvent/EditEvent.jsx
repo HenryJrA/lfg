@@ -73,14 +73,14 @@ class EditEvent extends Component {
           hidden="true"
           />
 					<button
-          
+            className={styles.edit}
             type="submit"
-            className="btn btn-success"
+            
             disabled={this.state.invalidForm}
           >
             Save New Event 
           </button>
-          <button>
+          <button className={styles.warning}>
           <Link 
             className='btn btn-danger m-left'
             to='/events'

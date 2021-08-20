@@ -58,7 +58,9 @@ const EventCard = ({
        
           {event.host._id === user &&
             event.attendees.every((person) => person._id !== user) && (
-              <button onClick={() => handleDeleteEvent(event._id)}>
+              <button 
+              className={styles.warning}
+              onClick={() => handleDeleteEvent(event._id)}>
                 Delete
               </button>
             )}
@@ -67,7 +69,7 @@ const EventCard = ({
               <Link
                 to={{ pathname: `/events/${event._id}/edit`, state: { event } }}
               >
-                <button>Edit Event</button>
+                <button className={styles.edit}>Edit Event</button>
               </Link>
          
             )}

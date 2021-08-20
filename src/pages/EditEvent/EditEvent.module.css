@@ -8,3 +8,12 @@
   color: chartreuse;
 }
 
+button.edit{
+  background-color:dodgerblue
+}
+
+button.warning{
+  background-color: crimson;
+}
+
+

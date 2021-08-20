@@ -55,6 +55,8 @@ class CreateEventForm extends Component {
     const { name, type, address} = this.state
     return (
       <>
+      <div className={styles.container}>
+
         <Form
          
         widths='equal'
@@ -66,6 +68,7 @@ class CreateEventForm extends Component {
           <Form.Group>
             <Form.Field>
             <label
+            color={styles.input}
             htmlFor='eventName' >Event Name</label>
             <input
               type='text'
@@ -110,6 +113,7 @@ class CreateEventForm extends Component {
             >Add Event</Button>
           </Form.Group>
         </Form>
+      </div>
         
       </>
     );
