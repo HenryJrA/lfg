@@ -1,5 +1,5 @@
 ##  Objective:
-Create an app where you can socialize and meet new people, and have a 
+Creating a MERN stack application.
 ## Motivation:
 
 ## To Checkout the app:
@@ -12,11 +12,13 @@ Create an app where you can socialize and meet new people, and have a
 
 <img src ='public/readmeimg/trello1.png'>
 <img src ='public/readmeimg/trello2.png'>
-## Initial Wire Frame:
 
+## Trello Board Link:
+[Trello](https://trello.com/b/Q86Qd1Nj/lfg).
 
 ## How it looks now:
 <img src='public/readmeimg/webapp.png'>
+<img src='public/readmeimg/lfg.png>
 
 ## Technology Used:
 - React  
