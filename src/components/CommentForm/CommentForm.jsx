@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styles from './CommentForm.module.css'
 
 
 class CommentForm extends Component {
@@ -31,6 +32,7 @@ class CommentForm extends Component {
           onChange={this.handleChange}
         />
         <button 
+        className={styles.edit}
         onClick={this.handleSubmit}
         type='submit'>
           Add Comment

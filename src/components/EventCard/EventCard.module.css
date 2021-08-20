@@ -19,3 +19,11 @@ h3{
   font-size: large;
 }
 
+button.edit{
+  background-color:dodgerblue
+}
+
+button.warning{
+  background-color: crimson;
+}
+

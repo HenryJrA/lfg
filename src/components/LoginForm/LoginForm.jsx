@@ -69,10 +69,12 @@ class LoginForm extends Component {
           </Form.Field>
 <Form.Field>
   <Button 
+  primary
   className={styles.button}
   type='submit'
   >Login</Button>
   <Button 
+  negative
 className={styles.button}
 type='submit'
   >Cancel</Button>
