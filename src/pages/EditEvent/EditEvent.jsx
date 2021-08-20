@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import * as eventService from '../../services/eventService'
+import styles from './EditEvent.module.css'
+
 class EditEvent extends Component {
   state = {
     invalidForm: false,
@@ -30,6 +32,7 @@ class EditEvent extends Component {
       <>
         <h1>Edit Event</h1>
         <form 
+        className={styles.container}
         ref={this.formRef} 
         onSubmit={this.handleSubmit}
         >
@@ -70,6 +73,7 @@ class EditEvent extends Component {
           hidden="true"
           />
 					<button
+          
             type="submit"
             className="btn btn-success"
             disabled={this.state.invalidForm}

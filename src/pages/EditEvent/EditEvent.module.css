@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+ 
+  background-image: url(https://img.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg?size=626&ext=jpg);
+  color: chartreuse;
+}
+
