@@ -2,8 +2,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: aquamarine;
-}
-main {
-  background-color: aquamarine;
+  background-image: url(https://img.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg?size=626&ext=jpg);
+  color: chartreuse;
 }
