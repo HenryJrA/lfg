@@ -31,7 +31,7 @@ const EventCard = ({
 
         <div className={styles.container}>
           <h1 className={styles.h1}>
-            Event Adress :<br /> 
+            Event Address :<br /> 
             
           </h1>
             <h3 className={styles.h3}>{event?.address}</h3>
