@@ -1,3 +1,7 @@
+## App Name :
+<img src ='public/readmeimg/lfg_web.png'>
+‎‎                                                                                                                 LFG(Looking For Group).
+
 ##  Objective:
 Creating a MERN stack application.
 ## Motivation:

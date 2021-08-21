@@ -5,7 +5,6 @@ import styles from './ProfileDetails.module.css'
 
 const ProfileDetails = ({location, user}) => {
   const {profile} = location.state
-  console.log(profile)
 
   return (
     <>

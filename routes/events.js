@@ -20,7 +20,7 @@ router.put('/:id', checkAuth, eventsCtrl.update)
 router.patch('/:id/edit', checkAuth, eventsCtrl.edit)
 router.post('/createEvent', checkAuth, eventsCtrl.createEvent)
 router.post('/:id', checkAuth, eventsCtrl.addComment)
-
+// stretch goals below:
 // router.post('/:id/replies', isLoggedIn, postsCtrl.addReply)
 // router.delete('/:postId/replies/:replyId', isLoggedIn, postsCtrl.deleteReply)
 // 

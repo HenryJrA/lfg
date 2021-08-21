@@ -12,7 +12,6 @@ class EditEvent extends Component {
   formRef = React.createRef();
 
    handleSubmit = async e => {
-     console.log("test")
     e.preventDefault();
     const event = eventService.editEvent(this.props.location.state.event._id, this.state.formData)
     this.props.history.push("/events")
