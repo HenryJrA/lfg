@@ -6,7 +6,6 @@ import CommentForm from '../../components/CommentForm/CommentForm';
 import styles from './EventDetails.module.css'
 
 const EventDetails = ({user, history, location, handleAddComment}) => {
-  console.log(user.profile)
   return ( 
     <>
     <div className={styles.container}>
