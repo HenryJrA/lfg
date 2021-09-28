@@ -27,8 +27,9 @@ class CommentForm extends Component {
       <>
       <form onSubmit={this.handleSubmit}>
         <textarea
+          type="text"
           name='content'
-          value={this.state.formData.comment}
+          value={this.state.formData.content}
           onChange={this.handleChange}
         />
         <button 
