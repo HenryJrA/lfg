@@ -12,7 +12,7 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
 
     <h1 className={styles.h1}>Event Name: </h1>
       
-      <h1 className={styles.h3}>{location.state.event.name}</h1>
+      <h1 className={styles.h3}>{location.state.event?.name}</h1>
     <MapCard 
     event={location.state.event}
     />

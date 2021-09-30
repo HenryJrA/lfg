@@ -33,8 +33,9 @@ class App extends Component {
 
  handleAddComment = async (comment, event) =>{
   const updatedAddCommentInEvent = await eventService.addComment(comment, event)
-  const events = this.state.events
-  this.setState(events)
+  const events = this.props.events
+  this.setState({ comment: comment })
+  this.props.history.push(`/events/`)
  }
 
   render() {

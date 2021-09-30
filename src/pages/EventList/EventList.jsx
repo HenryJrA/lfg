@@ -26,7 +26,6 @@ class EventList extends Component {
   }
 
   handleLeaveEvent = (id) => {
-    console.log(id)
   }
   handleDeleteEvent = async id => {
     const deleteEvent = await eventService.deleteEvent(id)
