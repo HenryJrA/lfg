@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./EventCard.module.css";
+import { Card, Icon } from 'semantic-ui-react'
+
 
 const EventCard = ({
   event,
@@ -13,6 +15,8 @@ const EventCard = ({
 }) => {
   return (
     <>
+  <Card.Group>
+    <Card>
       <div className={styles.container}>
         <div className={styles.container}>
           <h1 className={styles.h1}>Event Name:</h1>
@@ -34,7 +38,7 @@ const EventCard = ({
           <h3 className={styles.h3}>{event?.host?.name}</h3>
           <h1 className={styles.h1}>Pronouns :</h1>
           <h3 className={styles.h3}>{event?.host?.pronouns}</h3>
-          {event.host._id !== user &&
+          {/* {event.host._id !== user &&
             event.attendees.every((person) => person._id !== user) && (
               <button onClick={() => handleAddEvent(event._id)}>
                 Join Event
@@ -45,7 +49,7 @@ const EventCard = ({
               <button onClick={() => handleLeaveEvent(event._id)}>
                 Leave Event
               </button>
-            )}
+            )} */}
           {event.host._id === user &&
             event.attendees.every((person) => person._id !== user) && (
               <button
@@ -65,6 +69,8 @@ const EventCard = ({
             )}
         </div>
       </div>
+      </Card>
+      </Card.Group>
     </>
   );
 };
