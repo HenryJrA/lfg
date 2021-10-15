@@ -20,25 +20,25 @@ const NavBar = ({ user, handleLogout, history }) => {
 	return (
 		<>
 			{user ? (
-		 <Grid columns={1}>
-		 <Grid.Column>
-			 <Checkbox
-				 checked={visible}
-				 label={{ children: <code>🏠</code> }}
-				 onChange={(e, data) => setVisible(data.checked)}
-			 />
-		 </Grid.Column>
+		//  <Grid columns={1}>
+		//  <Grid.Column>
+		// 	 <Checkbox
+		// 		 checked={visible}
+		// 		 label={{ children: <code>🏠</code> }}
+		// 		 onChange={(e, data) => setVisible(data.checked)}
+		// 	 />
+		//  </Grid.Column>
 
-		 <Grid.Column style={{minHeight: '100vm'}}>
+		//  <Grid.Column style={{minHeight: '100vm'}}>
 			 <Sidebar.Pushable as={Segment}>
 				 <Sidebar
 					 as={Menu}
 					 animation='overlay'
 					 icon='labeled'
 					 inverted
-					 onHide={() => setVisible(false)}
+					//  onHide={() => setVisible(false)}
 					 vertical
-					 visible={visible}
+					 visible
 					 width='thin'
 				
 				 >
@@ -73,17 +73,17 @@ const NavBar = ({ user, handleLogout, history }) => {
 					 </Segment>
 				 </Sidebar.Pusher>
 			 </Sidebar.Pushable>
-		 </Grid.Column>
-	 </Grid>
+	// 	 </Grid.Column>
+	//  </Grid>
 			) : (
-				<Grid columns={1}>
-				<Grid.Column>
-					<Checkbox
-						checked={visible}
-						label={{ children: <code>🏠</code> }}
-						onChange={(e, data) => setVisible(data.checked)}
-					/>
-				</Grid.Column>
+				// <Grid columns={1}>
+				// <Grid.Column>
+				// 	<Checkbox
+				// 		checked={visible}
+				// 		label={{ children: <code>🏠</code> }}
+				// 		onChange={(e, data) => setVisible(data.checked)}
+				// 	/>
+				// </Grid.Column>
 	
 				<Grid.Column>
 					<Sidebar.Pushable as={Segment}>
@@ -92,9 +92,9 @@ const NavBar = ({ user, handleLogout, history }) => {
 							animation='overlay'
 							icon='labeled'
 							inverted
-							onHide={() => setVisible(false)}
+							// onHide={() => setVisible(false)}
 							vertical
-							visible={visible}
+							visible
 							width='thin'
 						>
 							<Menu.Item as={Link} to='/login'>
@@ -118,7 +118,7 @@ const NavBar = ({ user, handleLogout, history }) => {
 						</Sidebar.Pusher>
 					</Sidebar.Pushable>
 				</Grid.Column>
-			</Grid>
+			// </Grid>
 			)}
 		</>
 	)
