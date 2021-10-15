@@ -1,6 +1,6 @@
 import React from 'react';
 import * as eventServices from '../../services/eventService'
-
+import { Card, Icon, Comment } from 'semantic-ui-react'
 import MapCard from '../../components/MapCard/MapCard';
 import CommentForm from '../../components/CommentForm/CommentForm';
 import styles from './EventDetails.module.css'
@@ -8,6 +8,7 @@ import styles from './EventDetails.module.css'
 const EventDetails = ({user, history, location, handleAddComment}) => {
   return ( 
     <>
+    <Card>
     <div className={styles.container}>
 
     <h1 className={styles.h1}>Event Name: </h1>
@@ -28,7 +29,7 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
         
         
    <div>
-
+    <Comment>
    <CommentForm 
     user={user.profile}
     handleAddComment={handleAddComment}
@@ -37,9 +38,9 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
     />
     {location.state.event.comment.map(comment =>
       <div className={styles.h1}>
-        <h3 className={styles.h1}>
+        {/* <h3 className={styles.h1}>
         Comments: 
-        </h3>
+        </h3> */}
         <h3 className={styles.h3}>
 
           {user.name} says:
@@ -47,9 +48,10 @@ const EventDetails = ({user, history, location, handleAddComment}) => {
            {comment.content}
       </div>
       )}
+   </Comment>
     </div>
    </div>
-
+   </Card>
     </>
    );
 }
